@@ -1,0 +1,238 @@
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Sequence generation"
+Testing Sequence generation
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic pa2_seq_key.c sequence.c -o pa2_seq
+timeout 2s ./pa2_seq 3 > seq1.txt
+diff seq1.txt examples/sequence3.txt
+timeout 2s ./pa2_seq 12 > seq2.txt
+diff seq1.txt examples/sequence3.txt
+timeout 2s ./pa2_seq 20 > seq3.txt
+diff seq3.txt examples/sequence3.txt 
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 3s ./pa2_ashell -a examples/20.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 5s ./pa2_ashell -a examples/500.b > out1.txt
+Test Case 3 Timed out
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 5s ./pa2_ashell -a examples/2000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 6s ./pa2_ashell -a examples/90000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 30s ./pa2_ashell -a examples/900000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 100s ./pa2_ashell -a examples/10000000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 3s ./pa2_ashell -a examples/em.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 3s ./pa2_ashell -a examples/incr.txt > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Array"
+Testing Shell Sort using Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_array.c -o pa2_ashell
+timeout 5s ./pa2_ashell -a examples/900.b > out1.txt
+Test Case 10 Timed out
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 3s ./pa2_lshell -l examples/20.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 5s ./pa2_lshell -l examples/500.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 10s ./pa2_lshell -l examples/2000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 15s ./pa2_lshell -l examples/9000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 60s ./pa2_lshell -l examples/900000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 40s ./pa2_lshell -l examples/90000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 10s ./pa2_lshell -l examples/1000.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 3s ./pa2_lshell -l examples/em.b > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Shell Sort using Linked Lists"
+Testing Shell Sort using Linked Lists
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSHELL pa2_sort_key.c shell_array_key.c sequence_key.c shell_list_key2.c shell_list.c -o pa2_lshell
+timeout 3s ./pa2_lshell -l examples/incr.txt > out1.txt
+cat out1.txt | tail -1 > out2.txt
+diff out2.txt examples/mismatch.txt
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Loading files for Array"
+Testing Loading files for Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ALOAD pa2_io_key.c shell_array_key.c shell_list_key2.c sequence_key.c shell_array.c -o pa2_aload
+timeout 4s ./pa2_aload -a examples/20.b ou1.b
+diff ou1.b examples/20.b
+timeout 6s ./pa2_aload -a examples/900.b ou2.b
+diff ou2.b examples/900.b
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Loading files for Linked List"
+Testing Loading files for Linked List
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LLOAD pa2_io_key.c shell_array_key.c shell_list_key2.c sequence_key.c shell_list.c -o pa2_lload
+timeout 15s ./pa2_lload -l examples/9000.b ou3.b
+diff ou3.b examples/9000.b
+Binary files ou3.b and examples/9000.b differ
+shell_list_key2.c:115: warning: ‘Insert_after’ defined but not used
+shell_list.c: In function ‘List_Shellsort’:
+shell_list.c:99: warning: ‘compar_pre’ may be used uninitialized in this function
+shell_list.c: In function ‘List_Load_From_File’:
+shell_list.c:21: warning: ‘head’ may be used uninitialized in this function
+make: *** [test21] Error 2
+Test failed: 21
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Saving Files for Array"
+Testing Saving Files for Array
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_ASAVE pa2_io_key.c shell_array_key.c shell_list_key2.c sequence_key.c shell_array.c -o pa2_asave
+timeout 10s ./pa2_asave -a examples/90000.b ou5.b
+Test Case 22 Timed out
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Saving Files for Linked List"
+Testing Saving Files for Linked List
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic -Xlinker --allow-multiple-definition -DT_LSAVE pa2_io_key.c shell_array_key.c shell_list_key2.c sequence_key.c shell_list.c -o pa2_lsave
+timeout 10s ./pa2_lsave -l examples/9000.b ou7.b
+diff ou7.b examples/9000.b
+timeout 60s ./pa2_lsave -l examples/900000.b ou8.b
+diff ou8.b examples/900000.b
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Main"
+Testing Main
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic pa2.c shell_list.c shell_array.c sequence.c -o pa2_stu
+timeout 6s ./pa2_stu -a examples/20.b ou1.b
+number of compression: 2.200000e+01
+diff ou1.b examples/20sa.b
+timeout 6s ./pa2_stu -a examples/500.b ou1.b
+number of compression: 6.880000e+02
+diff ou1.b examples/500sa.b
+timeout 6s ./pa2_stu -l examples/20.b ou1.b
+number of compression: 2.400000e+01
+diff ou1.b examples/20sl.b
+timeout 8s ./pa2_stu -l examples/500.b ou1.b
+number of compression: 0.000000e+00
+diff ou1.b examples/500sl.b
+Test Passed
+***************************************
+rm -f generate pa2 *.o ou* memcheck.txt
+echo "Testing Leakage"
+Testing Leakage
+gcc -Wall -Wshadow -O3 -std=c99 -Wall -Wvla -pedantic pa2.c shell_list.c shell_array.c sequence.c -o pa2_stu
+valgrind --tool=memcheck --verbose --leak-check=full --show-reachable=yes --error-exitcode=2 --log-file=memcheck.txt ./pa2_stu -a examples/20.b ou1.b
+number of compression: 2.200000e+01
+Test Passed
