@@ -1,0 +1,10 @@
+---------------------------------------------------------------------
+getCircuitsByProject.sh: 10 pts
+getStudentsByProject.sh: 20 pts
+getCircuitsByStudent.sh: 15 pts
+getProjectsByStudent.sh: 15 pts
+getComponentUseCount.sh: 10 pts
+getMoreUsedComponent.sh: 10 pts
+---------------------------------------------------------------------
+
+Total Score = 80
