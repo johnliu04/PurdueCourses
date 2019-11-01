@@ -1,0 +1,10 @@
+﻿  Base.cpp
+  dPriv.cpp
+  dProt.cpp
+  dPublic.cpp
+  main.cpp
+  PrivDerived.cpp
+  ProtDerived.cpp
+  PublicDerived.cpp
+  Generating Code...
+  Projecta.vcxproj -> C:\Users\BestF\Desktop\Purdue\ECE30862\C++\HW5\Projecta\Debug\Projecta.exe

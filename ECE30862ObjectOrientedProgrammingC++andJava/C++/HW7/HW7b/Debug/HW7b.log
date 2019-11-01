@@ -1,0 +1,6 @@
+﻿  Set.cpp
+C:\Users\BestF\Desktop\Purdue\ECE30862\C++\HW7\HW7b\Set.cpp(28,50): warning C4334:  '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\BestF\Desktop\Purdue\ECE30862\C++\HW7\HW7b\Set.cpp(29,38): warning C4244:  '=': conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+C:\Users\BestF\Desktop\Purdue\ECE30862\C++\HW7\HW7b\Set.cpp(36,50): warning C4334:  '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\BestF\Desktop\Purdue\ECE30862\C++\HW7\HW7b\Set.cpp(118,42): error C2100:  illegal indirection
+C:\Users\BestF\Desktop\Purdue\ECE30862\C++\HW7\HW7b\Set.cpp(118,42): error C3192:  syntax error: '^' is not a prefix operator (did you mean '*'?)
