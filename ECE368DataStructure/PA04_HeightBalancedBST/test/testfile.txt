@@ -1,0 +1,5 @@
+gcc -std=c99 -pedantic -Wvla -Wall -Wshadow -O3 binary.c -o test
+./test tree4.txt tree4.b
+
+gcc -std=c99 -pedantic -Wvla -Wall -Wshadow -O3 txtfile.c -o test
+./test tree4.b
