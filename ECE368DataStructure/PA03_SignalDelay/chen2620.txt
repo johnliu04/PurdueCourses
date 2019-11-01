@@ -1,0 +1,241 @@
+===== PA3 Grading =====
+
+username: chen2620
+
+===== Extracting files =====
+
+Command: unzip /home/min/a/nnandan/ece368/grading/pa3/submissions/files/PA3_chen2620_attempt_2019-03-03-16-37-55_pa3.zip -d /home/min/a/nnandan/ece368/grading/pa3/temp/
+Output:
+Archive:  /home/min/a/nnandan/ece368/grading/pa3/submissions/files/PA3_chen2620_attempt_2019-03-03-16-37-55_pa3.zip
+  inflating: /home/min/a/nnandan/ece368/grading/pa3/temp/main.c  
+  inflating: /home/min/a/nnandan/ece368/grading/pa3/temp/tree.c  
+  inflating: /home/min/a/nnandan/ece368/grading/pa3/temp/main.h  
+
+
+===== Compilation =====
+
+Failed to find directory containing pa3.c
+Command: gcc -std=c99 -pedantic -Wvla -Wall -Wshadow -O3 *.c -o pa3
+Output:
+
+
+===== Testcases =====
+
+=== 3 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/3.txt /home/min/a/nnandan/ece368/grading/pa3/temp/3_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/3_delay.b
+Output:
+==9901== Memcheck, a memory error detector
+==9901== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==9901== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==9901== Command: /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/3.txt /home/min/a/nnandan/ece368/grading/pa3/temp/3_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/3_delay.b
+==9901== 
+==9901== 
+==9901== HEAP SUMMARY:
+==9901==     in use at exit: 0 bytes in 0 blocks
+==9901==   total heap usage: 14 allocs, 14 frees, 2,168 bytes allocated
+==9901== 
+==9901== All heap blocks were freed -- no leaks are possible
+==9901== 
+==9901== For counts of detected and suppressed errors, rerun with: -v
+==9901== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+
+
+Valgrind: 0 errors detected
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Correct preorder output file: 4 out of 4 points
+Delay output file generated: 1 out of 1 point
+Delay check: 0 out of 3 sink nodes differ: 7 out of 7 points
+
+Points earned on this test case: 13 out of 13 points
+
+=== 5 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/5.txt /home/min/a/nnandan/ece368/grading/pa3/temp/5_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/5_delay.b
+Output:
+==9905== Memcheck, a memory error detector
+==9905== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==9905== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==9905== Command: /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/5.txt /home/min/a/nnandan/ece368/grading/pa3/temp/5_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/5_delay.b
+==9905== 
+==9905== 
+==9905== HEAP SUMMARY:
+==9905==     in use at exit: 0 bytes in 0 blocks
+==9905==   total heap usage: 22 allocs, 22 frees, 2,520 bytes allocated
+==9905== 
+==9905== All heap blocks were freed -- no leaks are possible
+==9905== 
+==9905== For counts of detected and suppressed errors, rerun with: -v
+==9905== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+
+
+Valgrind: 0 errors detected
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Correct preorder output file: 4 out of 4 points
+Delay output file generated: 1 out of 1 point
+Delay check: 0 out of 5 sink nodes differ: 7 out of 7 points
+
+Points earned on this test case: 13 out of 13 points
+
+=== 10 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/10.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10_delay.b
+Output:
+==9909== Memcheck, a memory error detector
+==9909== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==9909== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==9909== Command: /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/10.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10_delay.b
+==9909== 
+==9909== 
+==9909== HEAP SUMMARY:
+==9909==     in use at exit: 0 bytes in 0 blocks
+==9909==   total heap usage: 42 allocs, 42 frees, 3,400 bytes allocated
+==9909== 
+==9909== All heap blocks were freed -- no leaks are possible
+==9909== 
+==9909== For counts of detected and suppressed errors, rerun with: -v
+==9909== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+
+
+Valgrind: 0 errors detected
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Correct preorder output file: 4 out of 4 points
+Delay output file generated: 1 out of 1 point
+Delay check: 0 out of 10 sink nodes differ: 7 out of 7 points
+
+Points earned on this test case: 13 out of 13 points
+
+=== 100 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/100.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100_delay.b
+Output:
+==9921== Memcheck, a memory error detector
+==9921== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==9921== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==9921== Command: /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/100.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100_delay.b
+==9921== 
+==9921== 
+==9921== HEAP SUMMARY:
+==9921==     in use at exit: 0 bytes in 0 blocks
+==9921==   total heap usage: 402 allocs, 402 frees, 19,240 bytes allocated
+==9921== 
+==9921== All heap blocks were freed -- no leaks are possible
+==9921== 
+==9921== For counts of detected and suppressed errors, rerun with: -v
+==9921== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+
+
+Valgrind: 0 errors detected
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Correct preorder output file: 4 out of 4 points
+Delay output file generated: 1 out of 1 point
+Delay check: 0 out of 100 sink nodes differ: 8 out of 8 points
+
+Points earned on this test case: 14 out of 14 points
+
+=== 1000 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/1000.txt /home/min/a/nnandan/ece368/grading/pa3/temp/1000_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/1000_delay.b
+Output:
+==9934== Memcheck, a memory error detector
+==9934== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==9934== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==9934== Command: /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/1000.txt /home/min/a/nnandan/ece368/grading/pa3/temp/1000_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/1000_delay.b
+==9934== 
+==9934== 
+==9934== HEAP SUMMARY:
+==9934==     in use at exit: 0 bytes in 0 blocks
+==9934==   total heap usage: 4,002 allocs, 4,002 frees, 177,640 bytes allocated
+==9934== 
+==9934== All heap blocks were freed -- no leaks are possible
+==9934== 
+==9934== For counts of detected and suppressed errors, rerun with: -v
+==9934== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+
+
+Valgrind: 0 errors detected
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Correct preorder output file: 4 out of 4 points
+Delay output file generated: 1 out of 1 point
+Delay check: 0 out of 1000 sink nodes differ: 8 out of 8 points
+
+Points earned on this test case: 14 out of 14 points
+
+=== 10000 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/10000.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10000_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10000_delay.b
+Output:
+==9971== Memcheck, a memory error detector
+==9971== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==9971== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==9971== Command: /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/10000.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10000_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/10000_delay.b
+==9971== 
+==9971== 
+==9971== HEAP SUMMARY:
+==9971==     in use at exit: 0 bytes in 0 blocks
+==9971==   total heap usage: 40,002 allocs, 40,002 frees, 1,761,640 bytes allocated
+==9971== 
+==9971== All heap blocks were freed -- no leaks are possible
+==9971== 
+==9971== For counts of detected and suppressed errors, rerun with: -v
+==9971== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+
+
+Valgrind: 0 errors detected
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Correct preorder output file: 4 out of 4 points
+Delay output file generated: 1 out of 1 point
+Delay check: 0 out of 10000 sink nodes differ: 8 out of 8 points
+
+Points earned on this test case: 14 out of 14 points
+
+=== 100000 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/100000.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100000_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100000_delay.b
+Output:
+==9992== Memcheck, a memory error detector
+==9992== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==9992== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==9992== Command: /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/100000.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100000_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/100000_delay.b
+==9992== 
+==9992== 
+==9992== HEAP SUMMARY:
+==9992==     in use at exit: 0 bytes in 0 blocks
+==9992==   total heap usage: 400,002 allocs, 400,002 frees, 17,601,640 bytes allocated
+==9992== 
+==9992== All heap blocks were freed -- no leaks are possible
+==9992== 
+==9992== For counts of detected and suppressed errors, rerun with: -v
+==9992== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+
+
+Valgrind: 0 errors detected
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Correct preorder output file: 4 out of 4 points
+Delay output file generated: 1 out of 1 point
+Delay check: 0 out of 100000 sink nodes differ: 8 out of 8 points
+
+Points earned on this test case: 14 out of 14 points
+
+=== 1000000 sink nodes ===
+Command: valgrind /home/min/a/nnandan/ece368/grading/pa3/temp/pa3 /home/min/a/nnandan/ece368/grading/pa3/files/input/1000000.txt /home/min/a/nnandan/ece368/grading/pa3/temp/1000000_preorder.txt /home/min/a/nnandan/ece368/grading/pa3/temp/1000000_delay.b
+Output:
+failed to execute
+
+Points Earned:
+Preorder output file generated: 1 out of 1 point
+Failed to compare preorder output file to reference file
+Preorder output file: 0 out of 4 points
+
+Points earned on this test case: 1 out of 5 points
+
+Valgrind error penalty: 0 points
+
+Total points: 96 out of 100 points
