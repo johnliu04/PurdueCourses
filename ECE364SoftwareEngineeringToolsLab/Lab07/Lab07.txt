@@ -1,0 +1,74 @@
+	import os
+	import sys
+	from enum import Enum
+	
+	
+	'''a=(1.2,3.4)
+	print(a)
+	print(a[0]<a[1])'''
+	class Rectangle:
+	    def __init__(self,llPoint,urPoint):
+	        self.llPoint = llPoint
+	        self.urPoint = urPoint
+	        #print(llPoint)
+	        if llPoint[0]>=urPoint[0] or llPoint[1]>=urPoint[1]:
+	            raise ValueError("lower left point's coordinates are not less than those of the upper right point.")
+	
+	
+	
+	    def isSquare(self):
+	
+	        if (self.urPoint[0]-self.llPoint[0])==(self.urPoint[1]-self.llPoint[1]):
+	            return True
+	        else:
+	            return False
+	
+	    def intersectsWith(self,rect):
+	        if rect.llPoint[0]>self.llPoint[0] and rect.llPoint[1]>self.llPoint[1] and rect.llPoint[0]<self.urPoint[0] and rect.llPoint[1]<self.urPoint[1]:
+	            return True
+	        elif rect.llPoint[0]>self.llPoint[0] and rect.urPoint[1]>self.llPoint[1] and rect.llPoint[0]<self.urPoint[0] and rect.urPoint[1]<self.urPoint[1]:
+	            return True
+	        elif rect.urPoint[0]>self.llPoint[0] and rect.urPoint[1]>self.llPoint[1] and rect.urPoint[0]<self.urPoint[0] and rect.urPoint[1]<self.urPoint[1]:
+	            return True
+	        elif rect.urPoint[0]>self.llPoint[0] and rect.llPoint[1]>self.llPoint[1] and rect.urPoint[0]<self.urPoint[0] and rect.llPoint[1]<self.urPoint[1]:
+	            return True
+	        else:
+	            return False
+	    def __eq__(self,r2):
+	
+	
+	        if round((self.urPoint[0]-self.llPoint[0])*(self.urPoint[1]-self.llPoint[1]),2) == round((r2.urPoint[0]-r2.llPoint[0])*(r2.urPoint[1]-r2.llPoint[1]),2):
+	            return True
+	        else:
+	            return False
+	
+	
+	class Circle:
+	    #center is tuple
+	    #r is float
+	    def __init__(self,center,r):
+	        self.center = center
+	        self.r = r
+	        if r<=0:
+	            raise ValueError("radius must be greater than zero")
+	
+	    def intersectsWith(self,other):
+	        if type(other)==Circle:
+	            if (self.center[0]-other.center[0])*(self.center[0]-other.center[0])+(self.center[1]-other.center[1])*(self.center[1]-other.center[1])<(self.r-other.r)*(self.r-other.r):
+	                return True
+	            else:
+	                return False
+	        elif type(other)==Rectangle:
+	
+	            return
+	
+	
+	if __name__ == "__main__":
+	    rec1 = Rectangle((1.4, 3.6), (2.5, 4.7))
+	    rec2 = Rectangle((1.5, 3.7), (2.6, 8.0))
+	    print(rec1 == rec2)
+	    print(rec1.isSquare())
+	    print(rec1.intersectsWith(rec2))
+	    cir1 = Circle((3.2,1.5),4)
+	    cir2 = Circle((5.6,3,4),2)
+
