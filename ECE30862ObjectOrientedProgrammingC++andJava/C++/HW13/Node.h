@@ -6,18 +6,18 @@ using namespace std;
 
 template <typename T>
 class Node {
-   something data;
+   T data;
    Node* prev; 
    Node* next; 
 public:
-   Node(const something& data, Node* prev, Node<T>* next);
-   Node(const something& data);
-   void setNext(Node* nP);
-   void setPrev(Node* nP);
-   Node* getNext( ) const;
-   Node* getPrev( ) const;
+   Node(const T& data, Node<T>* prev, Node<T>* next);
+   Node(const T& data);
+   void setNext(Node<T>* nP){this->next = nP;}
+   void setPrev(Node<T>* nP){this->prev = nP;}
+   Node* getNext( ) {return this->next;}
+   Node* getPrev( ) {return this->prev;}
    virtual ~Node( );
-   something& getData( );
+   T& getData( ){return this->data;}
    bool operator<(const Node&) const;
    bool operator==(const Node&) const;
 };
@@ -44,4 +44,9 @@ bool isPrimitiveType<double>() {
 
 template <typename T> Node<T>::Node(const T& data, Node<T>* prev, Node<T>* next) : 
    data(data), prev(prev), next(next) { }
+
+template <typename T> Node<T>::Node(const T& data): data(data){}
+
+template <typename T> Node<T>::~Node( ){}
+
 #endif /* NODE_H_ */
